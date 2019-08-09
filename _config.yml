@@ -1,0 +1,7 @@
+livereload: false
+exclude: [assets/css, gruntfile.js, package.json, node_modules, dist]
+keep_files: [assets/css]
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

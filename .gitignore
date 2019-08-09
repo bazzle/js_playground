@@ -1,0 +1,28 @@
+# Don't track content of these folders
+node_modules/
+dist/
+_site/
+.sass-cache/
+# Don't track any of these files
+*Gemfile
+*.scss
+*.sass-cache
+*.package-lock.json
+*.css
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.psd
+*.sketch
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.map
