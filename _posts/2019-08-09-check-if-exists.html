@@ -1,0 +1,73 @@
+---
+title: Check if exists
+layout: default
+---
+
+
+  <div class="container">
+    <div class="inner">
+      <div class="notice">
+        Nowt to see here, check console
+      </div>
+      <div class="element">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // readmore doesn't exist
+var justvariable;
+var emptystring = '';
+var emptyarray = [];
+var nonelement = document.querySelector('.class');
+var existingelement = document.querySelector('.element');
+
+// HOW TO CHECK IF THINGS EXIST
+
+console.log('-----------------------------------------');
+
+// check if variable has no value
+if (justvariable == null){
+  console.log(`this is just a variable, no value – type: ${typeof justvariable}` );
+}
+
+// check if a string is empty
+if (emptystring == ''){
+  console.log(`string is empty – type: ${typeof emptystring}` );
+}
+
+// check if an array has a value
+if (emptyarray == '' ){
+  console.log(`array is empty – type: ${typeof emptyarray}` );
+}
+
+// Check if an element doesn't exists
+if (nonelement == null){
+  console.log(`element doesn't exist – type: ${typeof nonelement}` );
+}
+
+// Shorthand for if an element doesn't exist
+if (!nonelement){
+  console.log(`element doesn't exist – type: ${typeof nonelement}` );
+}
+
+// Check if an element does exists
+if (existingelement != null){
+  console.log(`element does exist – type: ${typeof existingelement}` );
+}
+
+// Shorthand if an element does exist
+if (existingelement){
+  console.log(`element does exist – type: ${typeof existingelement}` );
+}
+
+// Check more than one thing exists at the same time
+
+console.log('---------------');
+
+// Check if empty string is not a number, and if it's not empty
+if ( typeof emptystring != 'number' && emptystring == '' ){
+  console.log('not a number, not empty');
+}
+
+</script>

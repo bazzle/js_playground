@@ -1,7 +1,0 @@
-livereload: false
-destination: dist
-exclude: [gruntfile.js, package.json, node_modules, yarn.lock, package.lock]
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag

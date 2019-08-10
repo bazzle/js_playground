@@ -1,0 +1,54 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.animal {
+  max-width: 650px;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: #FFF;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  h1, h2, h3{
+    text-align:left;
+  }
+  p{
+    text-align:left;
+  }
+}
+
+.pet-photo {
+  float: left;
+  width: 40%;
+  margin-right: 15px;
+}
+
+.pet-name {
+  margin: 0 0 1rem 0;
+  text-align:left;
+}
+
+.species {
+  font-size: .9rem;
+  color: #888;
+  vertical-align: middle;
+  text-align:left;
+}
+
+.foods-list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 17px;
+  font-size: .85rem;
+  line-height: 1.5;
+  text-align:left;
+}
+
+.footer {
+  font-size: .7rem;
+  color: #888;
+  text-align: center;
+  margin: 0;
+}

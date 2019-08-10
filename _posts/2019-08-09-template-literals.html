@@ -1,0 +1,72 @@
+---
+title: Template Literals
+layout: default
+---
+<body>
+  
+
+  <div class="container">
+    <div class="inner">
+
+      <div id="app">
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const petsData = [
+  {
+    name: "Purrsloud",
+    species: "Cat",
+    favFoods: ["wet food", "dry food", "<strong>any</strong> food"],
+    birthYear: 2017,
+    photo: "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+  },
+  {
+    name: "Barksalot",
+    species: "Dog",
+    birthYear: 2008,
+    photo: "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
+  },
+  {
+    name: "Meowsalot",
+    species: "Cat",
+    favFoods: ["tuna", "catnip", "celery"],
+    birthYear: 2012,
+    photo: "https://learnwebcode.github.io/json-example/images/cat-1.jpg"
+  }
+];
+
+
+function foods(foodslist){
+  // return this template literal
+  return `
+  <h3>Favourite foods</h3>
+  <ul class="foods-list">
+   <!--array map outputting template literal and join each item-->
+    ${foodslist.map((t) => `<li>${t}</li>`).join('')}
+  </ul>
+  `
+};
+
+function petTemplate(pet){
+  return `
+  <div class="animal">
+    <img class="pet-photo" src="${pet.photo}" />
+    <h2 class="pet-name">${pet.name} <span class="species">(${pet.species})</span></h2>
+    <p>Born ${pet.birthYear}</p>
+    ${pet.favFoods ? foods(pet.favFoods ): ''}
+  </div>
+  `
+}
+
+document.getElementById('app').innerHTML=`
+  <h1 class="app-title">Pets (${petsData.length} results)</h1>
+  
+  ${petsData.map( petTemplate ).join('')}
+
+  <p class="footer">These ${petsData.length} pets were added recently. Check back soon for updates.</p>
+`
+  </script>
+

@@ -1,0 +1,35 @@
+---
+title: Input event
+layout: default
+---
+  
+  
+  <div class="doshizz">
+    <form class="doshizz__form">
+      <div class="doshizz__form__item">
+        <label>Enter any shizz</label>
+        <input type="text" class="js-input">
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="inner">
+      <div class="output">
+        <p class="js-output">Shizz</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const input = document.querySelector('.js-input');
+    const log = document.querySelector('.js-output');
+    const placeholdertext = "Shizz";
+
+    input.addEventListener('input',(i) => {
+      log.textContent = i.srcElement.value;
+      if ( log.textContent == '' ){
+        log.textContent = placeholdertext;
+      }
+    })
+  </script>

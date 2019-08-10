@@ -1,0 +1,26 @@
+---
+title: New image
+layout: default
+---
+
+  <div class="doshizz">
+    <button class="doshizz__button js_button">Click me to do shizz</button>
+  </div>
+
+  <div class="container">
+    <div class="inner">
+      <div id="app">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const trigger = document.querySelector('.js_button');
+    const newimage = new Image();
+    const container = document.querySelector('.container');
+    newimage.src = "http://placeimg.com/640/480/any";
+
+    trigger.addEventListener('click', () => {
+      container.appendChild(newimage);
+    })
+  </script>

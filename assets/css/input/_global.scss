@@ -1,0 +1,151 @@
+// reset things
+ul{
+  padding:0;
+  margin:0;
+  li{
+    padding:0;
+    margin:0;
+    list-style-type:none;
+  }
+}
+*{
+  box-sizing: border-box;
+}
+
+$header-height:80px;
+$gap:2rem;
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,900&display=swap');
+
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+@mixin normal{
+  font-weight:600;
+  font-size:16px;
+}
+@mixin blocky{
+  text-transform: uppercase;
+  font-weight:800;
+  font-size:18px;
+}
+@mixin tinyblocky{
+  text-transform: uppercase;
+  font-weight:800;
+  font-size:10px;
+}
+@mixin tiny{
+  font-size:12px;
+}
+
+h1, h2, h3, h4{
+  @include blocky;
+}
+
+.button{
+  margin:0;
+  border:0;
+  @include tinyblocky;
+  padding:1rem;
+  color:white;
+  background-color:#5b5b5b;
+  cursor:pointer;
+  border-radius:3px;
+  transition:all,.5s;
+  &:hover{
+    background-color:darken(#5b5b5b, 8);
+  }
+  &--doshizz{
+    color:white;
+    &:hover{
+      background-color:darken(tomato, 8);
+    }
+    &.clicked{
+      background-color:green;
+    }
+  }
+  &--menu{
+    position:absolute;
+    top:$gap;
+    left:$gap;
+    z-index:5;
+    &[aria-expanded='true']{
+      color:#5b5b5b;
+      border:1px solid #5b5b5b;
+      background-color:white;
+    }
+  }
+}
+
+
+.doshizz{
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  background-color:tomato;
+  border-radius:3px;
+  padding:1rem;
+  padding-bottom:0;
+  &__form{
+    border-radius:3px;
+    color:white;
+    &__item{
+      margin-bottom:1rem;
+      &--submit{
+        display:flex;
+      }
+    }
+  }
+  label{
+    @include tiny;
+    display:block;
+    margin-bottom:0;
+  }
+  input{
+    @include normal;
+    border:1px solid gray;
+    padding:.5em;
+    &.invalid{
+      border: 1px solid black;
+    }
+  }
+  input[type="text"]{
+    width:100%;
+    padding:1rem;
+  }
+  button{
+    background-color:white;
+    color:tomato;
+  }
+}
+
+.container{
+  width:100%;
+  height:100%;
+  background-color:gold;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice{
+  @include blocky;
+}
+
+.output{
+  text-transform: uppercase;
+  font-weight:800;
+  font-size:18px;
+}
+
+.inner{
+  text-align:center; 
+}

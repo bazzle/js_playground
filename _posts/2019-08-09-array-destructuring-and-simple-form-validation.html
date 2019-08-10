@@ -1,0 +1,63 @@
+---
+title: Array destructuring and form validation
+layout: default
+---
+  
+  <div class="doshizz">
+    <form class="doshizz__form">
+      <div class="doshizz__form__item">
+        <label>Enter four numbers</label>
+        <input type="number" class="js-input" max="9999">
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="inner">
+      
+      <button class="firstlast">Get the first and last numbers</button>
+      <button class="notfirst">Get all numbers except the first</button>
+
+      <div class="output">
+        <p class="js-output js-output-2"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    const firstlastButton = document.querySelector('.firstlast');
+    const notfirstButton = document.querySelector('.notfirst');
+    const input = document.querySelectorAll('input');    const output = document.querySelector('.js-output-2');
+    let currentnum;
+
+    input.forEach(function(i){
+      i.addEventListener('input',(evt) => {
+        if ( i.checkValidity() ){
+        currentnum = i.value;
+        } else {
+        }
+      })
+    });
+
+    firstlastButton.addEventListener('click',()=>{
+      if (currentnum){
+        let currentnumArr = Array.from(currentnum);
+        [first,,,last] = currentnumArr
+        if (first && last){
+          output.textContent = `${first} ${last}`;
+        } else {
+          output.textContent = `not enough numbers`;
+        }
+      }
+    });
+    notfirstButton.addEventListener('click',()=>{
+      if (currentnum){
+        let currentnumArr = Array.from(currentnum);
+        [first,...remaining] = currentnumArr
+        output.textContent = `${remaining.join(' ')}`;
+      }
+    });
+
+
+  </script>

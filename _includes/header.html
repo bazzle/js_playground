@@ -1,0 +1,19 @@
+<button class="button button--menu js-menu-button" aria-pressed="false" aria-expanded="false">
+  Menu
+</button>
+
+<div class="menu js-menu">
+  <div class="menu__container">
+    <div class="row">
+      <nav class="cp main-menu">
+        <ul class="main-menu__list">
+          {% for post in site.posts %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

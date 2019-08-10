@@ -1,0 +1,47 @@
+
+
+.menu{
+  position:fixed;
+  width:100vw;
+  height:auto;
+  background-color:white;
+  visibility:hidden;
+  opacity:0;
+  transition:all, .2s;
+  &.visible{
+    visibility:visible;
+    opacity:1;
+  }
+  &__container{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.main-menu{
+  height:auto;
+  width:100%;
+  position:relative;
+  padding:$gap;
+  padding-left:$gap;
+  padding-top:$gap*4;
+  &__list{
+    display:block;
+    width:100%;
+    li{
+      list-style-type:none;
+      padding:0;
+      margin:0;
+      text-align:left;
+      padding-top:.3em;
+      padding-bottom:.3em;
+      a{
+        text-decoration: none;
+        color:black;
+      }
+    }
+  }
+}

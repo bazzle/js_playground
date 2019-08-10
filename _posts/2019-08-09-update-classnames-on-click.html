@@ -1,0 +1,38 @@
+---
+title: Update classnames on click
+layout: default
+---
+<body>
+  
+
+  <div class="container">
+    <div class="inner">
+
+      <div id="app">
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    const buttons = document.querySelectorAll('button');
+    // turn off all other buttons
+    buttons.forEach((button) => {
+      button.addEventListener('click', ()=>{
+        buttons.forEach((b) => {
+          b.classList.remove('clicked');
+        })
+        if ( button.classList.contains("clicked") ){
+          button.classList.remove('clicked');
+        } else {
+          button.classList.add('clicked');
+        }
+      })
+    });
+
+  </script>
+
